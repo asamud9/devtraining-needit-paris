@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Caused by Change" max_length="60" name="causedbychange" type="string"/>
+        <element label="Due date" max_length="40" name="duedate" type="integer"/>
+        <element label="New field" max_length="40" name="new_field_1" type="integer"/>
+        <element label="Test self service view" max_length="40" name="new_field_2" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Problem" max_length="40" name="problem" type="string"/>
+        <element attributes="encode_utf8=false" label="Request for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Your Department Choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Business service" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Change request" max_length="40" name="u_string_3" type="string"/>
+        <element choice="3" default="hr1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="integer">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="when needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
